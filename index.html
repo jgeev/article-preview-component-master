@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!--  <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+    <!-- 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body class="mw-100">
+    <main class="container">
+      <div
+        class="d-flex flex-column min-vh-100 justify-content-center align-items-center mb-4 shadow-sm"
+      >
+        <div class="card">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="bg-image rounded-end"></div>
+            </div>
+            <div class="col-md-8 m-auto p-4">
+              <p class="mb-0 h5">
+                Shift the overall look and feel by adding these wonderful
+                touches to furniture in your home
+              </p>
+
+              <p class="card-text py-2">
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I’ve got some simple tips
+                to help you make any room feel complete.
+              </p>
+              <div class="row">
+                <div class="col-md-2 col-sm-2">
+                  <img
+                    class="rounded-circle avatar"
+                    src="./images/avatar-michelle.jpg"
+                  />
+                </div>
+
+                <div class="col-md-8 col-sm-8">
+                  <span class="fw-bolder"> Michelle Appleton</span>
+                  <p>28 Jun 2020</p>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                  <button
+                    type="submit"
+                    class="btn btn-circle btn-xl mb-3 col-1"
+                    data-toggle="popover"
+                    data-trigger="focus"
+                    data-popover-content="#btn-popover"
+                  >
+                    <img
+                      src="./images/icon-share.svg"
+                      style="height: 1rem; width: 1rem"
+                    />
+                  </button>
+                  <div id="btn-popover" class="hidden">
+                    <div class="popover-content row">
+                      <span class="text-uppercase"> Share</span>
+                      <img class="btn" src="./images/icon-facebook.svg" />
+                      <img src="./images/icon-twitter.svg" />
+                      <img src="./images/icon-pinterest.svg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      $(function () {
+        $("[data-toggle=popover]").popover({
+          html: true,
+          placement: "top",
+          content: function () {
+            var content = $(this).attr("data-popover-content");
+            return $(content).children(".popover-content").html();
+          },
+        });
+      });
+    </script>
+  </body>
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+ -->
+</html>
